@@ -1,0 +1,58 @@
+/* ================================================
+   RESPONSIVIDADE — Mandala Redesign
+   ================================================ */
+
+/* ---- ≤ 1024px ---- */
+@media (max-width: 1024px) {
+    .nav-links { display: none; }
+    .btn-nav   { display: none; }
+    .hamburger { display: flex; }
+
+    .solucao-inner    { grid-template-columns: 1fr; gap: 3rem; }
+    .dif-inner        { grid-template-columns: 1fr; gap: 3rem; }
+    .dif-card         { position: static; }
+    .servicos-head    { grid-template-columns: 1fr; gap: 1.5rem; }
+    .pq-grid          { grid-template-columns: repeat(3, 1fr); }
+    .footer-inner     { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+}
+
+/* ---- ≤ 768px ---- */
+@media (max-width: 768px) {
+    section { padding: 5rem 0; }
+
+    .hero { padding-top: calc(var(--header-h) + 3rem); padding-bottom: 4rem; }
+    .hero-title { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+    .hero-stats { flex-direction: column; width: 100%; border-radius: var(--radius); }
+    .stat       { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .stat:last-child { border-bottom: none; }
+
+    .desafio-cols   { grid-template-columns: 1fr; }
+    .dep-grid       { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
+    .pq-grid        { grid-template-columns: repeat(2, 1fr); }
+
+    .sv-item             { flex-direction: column; align-items: flex-start; border-radius: var(--radius); gap: 1rem; }
+    .sv-item:nth-child(even) { margin-left: 0; }
+    .sv-item:hover       { transform: none; }
+    .sv-item:nth-child(even):hover { transform: none; }
+    .sv-pills            { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+
+    .frase-line span { font-size: clamp(3rem, 13vw, 6rem); }
+    .frase-rule      { margin: 0 1rem; }
+
+    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+
+    .cta-box { padding: 4rem 1.5rem; }
+    .hero-ctas { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---- ≤ 480px ---- */
+@media (max-width: 480px) {
+    .wrap { padding: 0 1.25rem; }
+    .hero-title { font-size: 2rem; }
+    .s-title    { font-size: 2rem; }
+    .pq-grid    { grid-template-columns: repeat(2, 1fr); }
+    .mini-grid  { grid-template-columns: 1fr; }
+    .dif-stats  { gap: 0; }
+    .frase-line span { font-size: 2.8rem; }
+}
