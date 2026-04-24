@@ -1,58 +1,248 @@
-/* ================================================
-   RESPONSIVIDADE — Mandala Redesign
-   ================================================ */
+html,
+body {
+    overflow-x: hidden !important;
+    max-width: 100vw;
+    position: relative;
+    width: 100%;
+}
 
 /* ---- ≤ 1024px ---- */
 @media (max-width: 1024px) {
-    .nav-links { display: none; }
-    .btn-nav   { display: none; }
-    .hamburger { display: flex; }
+    .nav-links {
+        display: none;
+    }
 
-    .solucao-inner    { grid-template-columns: 1fr; gap: 3rem; }
-    .dif-inner        { grid-template-columns: 1fr; gap: 3rem; }
-    .dif-card         { position: static; }
-    .servicos-head    { grid-template-columns: 1fr; gap: 1.5rem; }
-    .pq-grid          { grid-template-columns: repeat(3, 1fr); }
-    .footer-inner     { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    .btn-nav {
+        display: none !important;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .solucao-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .dif-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .dif-card {
+        position: static;
+    }
+
+    .servicos-head {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .pq-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
 }
 
 /* ---- ≤ 768px ---- */
 @media (max-width: 768px) {
-    section { padding: 5rem 0; }
+    section {
+        padding: 4rem 0;
+    }
 
-    .hero { padding-top: calc(var(--header-h) + 3rem); padding-bottom: 4rem; }
-    .hero-title { font-size: clamp(2.2rem, 8vw, 3.5rem); }
-    .hero-stats { flex-direction: column; width: 100%; border-radius: var(--radius); }
-    .stat       { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
-    .stat:last-child { border-bottom: none; }
+    /* Header e Container Principal */
+    .wrap {
+        padding: 0 1.5rem;
+    }
 
-    .desafio-cols   { grid-template-columns: 1fr; }
-    .dep-grid       { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; }
-    .pq-grid        { grid-template-columns: repeat(2, 1fr); }
+    .header-inner {
+        gap: 1rem;
+    }
 
-    .sv-item             { flex-direction: column; align-items: flex-start; border-radius: var(--radius); gap: 1rem; }
-    .sv-item:nth-child(even) { margin-left: 0; }
-    .sv-item:hover       { transform: none; }
-    .sv-item:nth-child(even):hover { transform: none; }
-    .sv-pills            { align-items: flex-start; flex-direction: row; flex-wrap: wrap; }
+    /* Hero e Textos */
+    .hero {
+        padding-top: calc(var(--header-h) + 2rem);
+        padding-bottom: 4rem;
+    }
 
-    .frase-line span { font-size: clamp(3rem, 13vw, 6rem); }
-    .frase-rule      { margin: 0 1rem; }
+    .hero-title {
+        font-size: clamp(2.2rem, 8vw, 3.5rem);
+        word-break: break-word;
+    }
 
-    .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
-    .footer-bottom { flex-direction: column; text-align: center; }
+    /* Botões CTA Mobile */
+    .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
 
-    .cta-box { padding: 4rem 1.5rem; }
-    .hero-ctas { flex-direction: column; align-items: flex-start; }
+    .hero-ctas a {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        width: 100%;
+        border-radius: var(--radius);
+        box-sizing: border-box;
+    }
+
+    .stat {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        text-align: center;
+    }
+
+    .stat:last-child {
+        border-bottom: none;
+    }
+
+    /* Grids */
+    .desafio-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .dep-grid {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .pq-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Serviços */
+    .sv-item {
+        flex-direction: column;
+        align-items: flex-start;
+        border-radius: var(--radius);
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .sv-item:nth-child(even) {
+        margin-left: 0;
+    }
+
+    .sv-item:hover {
+        transform: none;
+    }
+
+    .sv-item:nth-child(even):hover {
+        transform: none;
+    }
+
+    .sv-pills {
+        align-items: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .frase-line span {
+        font-size: clamp(2.5rem, 10vw, 5rem);
+    }
+
+    .frase-rule {
+        margin: 0 1rem;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .cta-box {
+        padding: 3rem 1.25rem;
+    }
 }
 
 /* ---- ≤ 480px ---- */
 @media (max-width: 480px) {
-    .wrap { padding: 0 1.25rem; }
-    .hero-title { font-size: 2rem; }
-    .s-title    { font-size: 2rem; }
-    .pq-grid    { grid-template-columns: repeat(2, 1fr); }
-    .mini-grid  { grid-template-columns: 1fr; }
-    .dif-stats  { gap: 0; }
-    .frase-line span { font-size: 2.8rem; }
+    .wrap {
+        padding: 0 1.25rem;
+    }
+
+    .header-inner {
+        gap: 0.5rem;
+        justify-content: space-between;
+    }
+
+    .header-inner>div {
+        gap: 0.75rem !important;
+    }
+
+    .logo-wrap {
+        gap: 0.4rem;
+    }
+
+    .logo-mark {
+        font-size: 1.1rem;
+    }
+
+    .logo-img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Títulos e Fontes menores */
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .s-title {
+        font-size: 1.8rem;
+        hyphens: auto;
+    }
+
+    .sv-num {
+        font-size: 2rem;
+    }
+
+    /* Grids */
+    .pq-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mini-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stats do Card Azul */
+    .dif-stats {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .ds {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
+        padding-bottom: 1rem;
+        width: 100%;
+    }
+
+    .ds:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    /* Frase Final */
+    .frase-line span {
+        font-size: 2rem;
+    }
 }
